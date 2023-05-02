@@ -42,15 +42,13 @@ function Main({ onEditProfile, onAddPlace, onEditAvatar, onCardClick }) {
                     onClick={onAddPlace}></button>
             </section>
             <section className="elements">
-                <template className="element-template">
-                    {cards.map((card) => {
-                        return <Card
-                            card={card}
-                            key={card._id}
-                            onCardClick={onCardClick}
-                        />
-                    })}
-                </template>
+                {cards.map((card) => {
+                    return (<Card
+                        card={card}
+                        key={card._id}
+                        onCardClick={onCardClick}
+                    />)
+                })}
             </section>
         </main>
     );
