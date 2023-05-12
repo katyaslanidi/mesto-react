@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import PopupWithForm from "./PopupWithForm";
 
 function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
-    
+
     const linkRef = useRef();
 
     const handleSubmit = (evt) => {

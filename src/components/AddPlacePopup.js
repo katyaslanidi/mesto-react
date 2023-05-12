@@ -62,24 +62,3 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   );
 }
 export default AddPlacePopup;
-
-    // const[title, setTitle] = useState('');
-    // const [link, setLink] = useState('');
-
-    // useEffect(() => {
-    //   setTitle('');
-    //   setLink('');
-    // }, [isOpen]);
-
-    // const handleSetTitle = (evt) => {
-    //     setTitle(evt.target.value);
-    // }
-
-    // const handleSetLink = (evt) => {
-    //     setLink(evt.target.value);
-    // }
-
-    // const handleSubmit = (evt) => {
-    //     evt.preventDeafault();
-    //     onAddPlace(title, link);
-    // }

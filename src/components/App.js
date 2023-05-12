@@ -107,7 +107,7 @@ function App() {
 
     const handleOverlayClick = (evt) => {
       if (evt.target.classList.contains('overlay_opened')
-      || evt.target.classList.contains('close-button')) {
+        || evt.target.classList.contains('close-button')) {
         closeAllPopups();
       }
     }
