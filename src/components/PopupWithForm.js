@@ -1,4 +1,4 @@
-function PopupWithForm({ children, name, title, buttonText, onClose, isOpen }) {
+function PopupWithForm({ children, name, title, buttonText, onClose, isOpen, onSubmit }) {
 
     return (
         <div className={`overlay ${name}-popup ${isOpen ? 'overlay_opened' : ''}`}>
@@ -12,6 +12,7 @@ function PopupWithForm({ children, name, title, buttonText, onClose, isOpen }) {
                 <form 
                     className={`popup__form ${name}__form`} 
                     name={name}
+                    onSubmit={onSubmit}
                 >
                     {children}
                     <button 

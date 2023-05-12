@@ -33,7 +33,7 @@ class Api {
             }),
         }).then((res) => this._getResponse(res));
     }
-    addNewCard(name, link) {
+    addNewCard({name, link}) {
         return fetch(`${this._url}/cards`, {
             method: "POST",
             headers: this._headers,
@@ -65,10 +65,15 @@ class Api {
         return fetch(`${this._url}/users/me/avatar`, {
             method: "PATCH",
             headers: this._headers,
-            body: JSON.stringify({
-                avatar: avatar.link,
-            }),
+            body: JSON.stringify(avatar),
         }).then((res) => this._getResponse(res));
+    }
+    changeLikeCardStatus(id, isLiked) {
+        if (isLiked) {
+            return this.addLikeCard(id);
+        } else {
+            return this.deleteLikeCard(id);
+        }
     }
 }
 
