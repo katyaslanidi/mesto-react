@@ -2,7 +2,7 @@ function PopupWithForm({ children, name, title, buttonText, onClose, isOpen, onS
 
     return (
         <div className={`overlay ${isOpen ? 'overlay_opened' : ''}`}>
-            <div className="popup">
+            <div className={`popup ${name}__popup`}>
                 <button
                     className={`popup__close ${name}__close close-button`}
                     type="button"
@@ -16,7 +16,7 @@ function PopupWithForm({ children, name, title, buttonText, onClose, isOpen, onS
                 >
                     {children}
                     <button
-                        className="popup__button popup__button_valid"
+                        className={`popup__button popup__button_valid ${name}__button`}
                         type="submit"
                         onClick={onClose}
                     >{buttonText || 'Сохранить'}</button>
